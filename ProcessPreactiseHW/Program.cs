@@ -7,7 +7,7 @@ void Run()
 { 
     while (true) 
     {
-        Console.WriteLine("1.Get current process\n2.Find Process by name\n3.Start process\n");
+        Console.WriteLine("1.Get current process\n2.Find Process by name\n3.Start Visual Code process\n");
 
         string? input = null;
 
@@ -67,12 +67,11 @@ void StartProcessByName()
 {
     try
     {
-        string? processName = null;
+        string? dir = "D:\\apps\\Microsoft VS Code\\Code.exe";
 
-        Console.WriteLine("Enter the process name:\n");     
-        processName = Console.ReadLine();
+        Console.WriteLine("Enter the process name:\n");
 
-        using Process p = Process.Start(processName);
+        using Process p = Process.Start(dir);
     }
     catch (Exception ex)
     {
