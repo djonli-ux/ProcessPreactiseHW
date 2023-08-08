@@ -69,8 +69,6 @@ void StartProcessByName()
     {
         string? dir = "D:\\apps\\Microsoft VS Code\\Code.exe";
 
-        Console.WriteLine("Enter the process name:\n");
-
         using Process p = Process.Start(dir);
     }
     catch (Exception ex)
